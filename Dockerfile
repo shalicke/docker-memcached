@@ -7,4 +7,4 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install memcached
 
 EXPOSE 11211
 
-ENTRYPOINT ["memcached", "-u", "root", "-S" "-l 0.0.0.0"]
+CMD /usr/bin/memcached -l 0.0.0.0 -S -u root
